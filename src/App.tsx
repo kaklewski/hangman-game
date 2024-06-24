@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import words from './wordList.json';
 import { HangmanDrawing } from './HangmanDrawing';
 import { HangmanWord } from './HangmanWord';
@@ -14,11 +14,14 @@ function App() {
 		(letter) => !wordToGuess.includes(letter)
 	);
 
-	function addGuessedLetter(letter: string) {
-		if (guessedLetters.includes(letter)) return;
+	const addGuessedLetter = useCallback(
+		(letter: string) => {
+			if (guessedLetters.includes(letter)) return;
 
-    setGuessedLetters(currentLetters => [...currentLetters, letter])
-	}
+			setGuessedLetters((currentLetters) => [...currentLetters, letter]);
+		},
+		[guessedLetters]
+	);
 
 	useEffect(() => {
 		const handler = (e: KeyboardEvent) => {
@@ -56,7 +59,13 @@ function App() {
 				wordToGuess={wordToGuess}
 			/>
 			<div style={{ alignSelf: 'stretch' }}>
-				<Keyboard />
+				<Keyboard
+					activeLetters={guessedLetters.filter((letter) =>
+						wordToGuess.includes(letter)
+					)}
+					inactiveLetters={incorrectLetters}
+					addGuessedLetter={addGuessedLetter}
+				/>
 			</div>
 		</div>
 	);
