@@ -24,7 +24,7 @@ function App() {
 
 	const addGuessedLetter = useCallback(
 		(letter: string) => {
-			if (guessedLetters.includes(letter)|| isLoser||isWinner) return;
+			if (guessedLetters.includes(letter) || isLoser || isWinner) return;
 
 			setGuessedLetters((currentLetters) => [...currentLetters, letter]);
 		},
@@ -59,17 +59,18 @@ function App() {
 				alignItems: 'center',
 			}}>
 			<div style={{ fontSize: '2rem', textAlign: 'center' }}>
-				{isWinner && 'Winner! - Refresh to try again'}
-				{isLoser && 'Nice try - Refresh to try again'}
+				{isWinner && 'Winner! Refresh to try again.'}
+				{isLoser && 'Nice try. Refresh to try again.'}
 			</div>
 			<HangmanDrawing numberOfGuesses={incorrectLetters.length} />
 			<HangmanWord
+				reveal={isLoser}
 				guessedLetters={guessedLetters}
 				wordToGuess={wordToGuess}
 			/>
 			<div style={{ alignSelf: 'stretch' }}>
 				<Keyboard
-        disabled={isWinner || isLoser}
+					disabled={isWinner || isLoser}
 					activeLetters={guessedLetters.filter((letter) =>
 						wordToGuess.includes(letter)
 					)}
