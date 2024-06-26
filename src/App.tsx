@@ -72,8 +72,8 @@ function App() {
 	return (
 		<div className={styles.appContainer}>
 			<div className={styles.messageContainer}>
-				{isWinner && 'Winner! Refresh to try again.'}
-				{isLoser && 'Nice try. Refresh to try again.'}
+				{isWinner && 'You won! Press Enter to try again.'}
+				{isLoser && 'You lost. Press Enter to try again.'}
 			</div>
 			<HangmanDrawing numberOfGuesses={incorrectLetters.length} />
 			<HangmanWord
