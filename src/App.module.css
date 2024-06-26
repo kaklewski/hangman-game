@@ -1,0 +1,19 @@
+.appContainer {
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 auto;
+	align-items: center;
+}
+
+.messageContainer {
+	font-size: 2rem;
+	text-align: center;
+	padding: 0.5em;
+}
+
+.keyboardContainer {
+  /* This is to reset the display:flex property set on the .appContainer */
+	align-self: stretch;
+}

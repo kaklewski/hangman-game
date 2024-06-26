@@ -3,9 +3,10 @@ import words from './wordList.json';
 import { HangmanDrawing } from './HangmanDrawing';
 import { HangmanWord } from './HangmanWord';
 import { Keyboard } from './Keyboard';
+import styles from './App.module.css';
 
-function getWord(){
-  return words[Math.floor(Math.random() * words.length)];
+function getWord() {
+	return words[Math.floor(Math.random() * words.length)];
 }
 
 function App() {
@@ -50,17 +51,15 @@ function App() {
 		};
 	}, [guessedLetters]);
 
-
-  useEffect(()=>{
-    const handler = (e: KeyboardEvent) => {
+	useEffect(() => {
+		const handler = (e: KeyboardEvent) => {
 			const key = e.key;
 
-			if (key !== 'Enter')return
-			
-      e.preventDefault();
-      setGuessedLetters([])
-      setWordToGuess(getWord())
+			if (key !== 'Enter') return;
 
+			e.preventDefault();
+			setGuessedLetters([]);
+			setWordToGuess(getWord());
 		};
 
 		document.addEventListener('keypress', handler);
@@ -68,19 +67,11 @@ function App() {
 		return () => {
 			document.removeEventListener('keypress', handler);
 		};
-  },[])
+	}, []);
 
 	return (
-		<div
-			style={{
-				maxWidth: '800px',
-				display: 'flex',
-				flexDirection: 'column',
-				gap: '2rem',
-				margin: '0 auto',
-				alignItems: 'center',
-			}}>
-			<div style={{ fontSize: '2rem', textAlign: 'center' }}>
+		<div className={styles.appContainer}>
+			<div className={styles.messageContainer}>
 				{isWinner && 'Winner! Refresh to try again.'}
 				{isLoser && 'Nice try. Refresh to try again.'}
 			</div>
@@ -90,7 +81,7 @@ function App() {
 				guessedLetters={guessedLetters}
 				wordToGuess={wordToGuess}
 			/>
-			<div style={{ alignSelf: 'stretch' }}>
+			<div className={styles.keyboardContainer}>
 				<Keyboard
 					disabled={isWinner || isLoser}
 					activeLetters={guessedLetters.filter((letter) =>

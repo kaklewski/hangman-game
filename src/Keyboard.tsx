@@ -43,12 +43,7 @@ export function Keyboard({
 	addGuessedLetter,
 }: KeyboardProps) {
 	return (
-		<div
-			style={{
-				display: 'grid',
-				gridTemplateColumns: 'repeat(auto-fit, minmax(75px, 1fr))',
-				gap: '.5rem',
-			}}>
+		<div className={styles.keyContainer}>
 			{KEYS.map((key) => {
 				const isActive = activeLetters.includes(key);
 				const isInactive = inactiveLetters.includes(key);

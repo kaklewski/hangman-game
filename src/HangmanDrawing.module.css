@@ -1,0 +1,105 @@
+.head {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: 10px solid black;
+	position: absolute;
+	top: 50px;
+	right: -30px;
+}
+
+.body {
+	width: 10px;
+	height: 100px;
+	background: black;
+	position: absolute;
+	top: 120px;
+	right: 0;
+}
+
+.rightArm {
+	width: 100px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 150px;
+	right: -100px;
+	transform: rotate(-30deg);
+	transform-origin: left bottom;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+.leftArm {
+	width: 100px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 150px;
+	right: 10px;
+	transform: rotate(30deg);
+	transform-origin: right bottom;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.rightLeg {
+	width: 100px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 210px;
+	right: -90px;
+	transform: rotate(60deg);
+	transform-origin: left bottom;
+	border-radius: 50px;
+}
+
+.leftLeg {
+	width: 100px;
+	height: 10px;
+	background: black;
+	position: absolute;
+	top: 210px;
+	right: 0px;
+	transform: rotate(-60deg);
+	transform-origin: right bottom;
+	border-radius: 50px;
+}
+
+.gallowsContainer {
+	position: relative;
+}
+
+.gallows4 {
+	height: 50px;
+	width: 10px;
+	background: black;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top-right-radius: 50px;
+}
+
+.gallows3 {
+	height: 10px;
+	width: 200px;
+	background: black;
+	margin-left: 120px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
+
+.gallows2 {
+	height: 400px;
+	width: 10px;
+	background: black;
+	margin-left: 120px;
+}
+
+.gallows1 {
+	height: 10px;
+	width: 250px;
+	background: black;
+	border-radius: 50px;
+}

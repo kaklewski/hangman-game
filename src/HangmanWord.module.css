@@ -1,0 +1,17 @@
+.word {
+	display: flex;
+	gap: 0.25em;
+	margin-top: 1rem;
+	background-color: white;
+	padding: 0rem 2rem 1.5rem 2rem;
+	border-radius: 10px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	font-size: 5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: monospace;
+}
+
+.letter {
+	border-bottom: 0.1em solid black;
+}
