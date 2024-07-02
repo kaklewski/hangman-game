@@ -6,6 +6,8 @@ This project is a classic Hangman game developed using React.js and TypeScript. 
 
 ## Live Version
 
+Available at: https://kaklewski.github.io/hangman-game/
+
 ## Features
 
 -   **Interactive UI:** Smooth and responsive user interface built with React components.
