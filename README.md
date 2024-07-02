@@ -1,16 +1,10 @@
 # Hangman Game (React + TypeScript + Vite)
 
-## Table of contents
+## About
 
--   [General info](#general-info)
--   [Features](#features)
--   [Technologies](#technologies)
--   [Getting started](#getting-started)
--   [Resources](#resources)
+This project is a classic Hangman game developed using React.js and TypeScript. The main goal of this project is to practice and improve my coding skills with these two frameworks. Put together with Vite.
 
-## General info
-
-This project is a classic Hangman game developed using React.js and TypeScript. The primary objective of this project is to practice and enhance my coding skills in React.js and TypeScript.
+## Live Version
 
 ## Features
 
@@ -18,17 +12,13 @@ This project is a classic Hangman game developed using React.js and TypeScript. 
 -   **Word Bank:** Guess words from a list of the thousand most popular English words.
 -   **Flexible Input:** Guess letters using either the keyboard or on-screen buttons.
 
-## Technologies
+## Screenshots
 
-Created with:
+![Screenshot 1](screenshots/screenshot1.png)
 
--   React 18.3
--   TypeScript 5.2
--   Vite 5.3
+![Screenshot 2](screenshots/screenshot2.png)
 
-## Getting started
-
-### How to run the project?
+## Run Locally
 
 1. Clone the project to your local machine:
 
@@ -46,11 +36,12 @@ Created with:
 
 `npm run dev`
 
-### How to build the project?
+## Build with Vite
 
--   Run `npm run build` to build the distribution.
--   Run `npm run preview` to preview the build.
+1. Build the dist:
 
-## Resources
+`npm run build`
 
-Inspired by [Link](https://www.youtube.com/watch?v=-ONUyenGnWw)
+2. Preview the build:
+
+`npm run preview`
