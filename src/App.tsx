@@ -75,12 +75,15 @@ function App() {
 				{isWinner && 'You won! Press Enter to try again.'}
 				{isLoser && 'You lost. Press Enter to try again.'}
 			</div>
+
 			<HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+
 			<HangmanWord
 				reveal={isLoser}
 				guessedLetters={guessedLetters}
 				wordToGuess={wordToGuess}
 			/>
+
 			<div className={styles.keyboardContainer}>
 				<Keyboard
 					disabled={isWinner || isLoser}
